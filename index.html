@@ -6,51 +6,79 @@
     <title>Document</title>
 
     <style>
+      /* Reset and base styles */
+      * {
+        box-sizing: border-box;
+      }
+
       html,
       body {
         height: 100%;
         margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        overflow: hidden; /* Prevent background scroll */
       }
 
+      /* Background Styling */
       body {
-        background-image: url("ChatGPT\ Image\ Mar\ 30\,\ 2025\,\ 05_13_33\ PM.png");
+        background-image: url("ChatGPT%20Image%20Mar%2030,%202025,%2005_13_33%20PM.png"); /* Encode special characters */
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        height: 100vh;
-        margin: 0;
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
       }
+
+      /* Main Container */
       #container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 45px;
-        padding: 45px;
-        border: 2px solid rgb(199, 191, 191);
-        border-radius: 45px;
-        background-color: rgb(9, 53, 53);
-        width: 45vw;
-        box-shadow: 12px 11px 10px 5px;
+        padding: 2rem;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        border-radius: 1.5rem;
+        background-color: rgba(9, 53, 53, 0.85);
+        width: 90%;
+        max-width: 500px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(4px);
+        text-align: center;
       }
 
+      /* Button Styling */
       #btn {
-        font-size: 21px;
+        font-size: 1.2rem;
         border-radius: 25px;
-        padding: 11px;
+        padding: 10px 20px;
+        border: none;
+        background-color: #04aa6d;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
       }
 
+      #btn:hover {
+        background-color: #038f5a;
+      }
+
+      /* Text Styling */
       #text {
-        font-size: 41px;
-        margin: 12px;
-        padding: 12px;
+        font-size: 2rem;
+        margin-top: 20px;
         color: aliceblue;
+        word-wrap: break-word;
       }
     </style>
   </head>
   <body>
     <div id="container">
-      <button id="btn">Kya Beta !! Touch Kara Isko !</button>
+     <h3 style="color: white;">Kya Beta !! Touch Kara Isko !</h3>
+      <button id="btn">Click Me</button>
       <div id="text"></div>
     </div>
 
